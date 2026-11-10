@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="userForm" onsubmit="formSubmit(event)">
+<label for="userId">ID:</label>
+<input type="number" id="userId" name="userId"  placeholder="Enter your valid user ID">
+<br>
+<label for="name">Name:</label>
+<input type="text" name="name" id="name"  placeholder="Enter your name" required
+
+pattern="[A-Za-z]+( [A-Za-z]+)*"
+title="Enter your valid name">
+<br>
+<label for="email">Email: </label>
+<input type="email" id="email" name="email" placeholder="Enter your valid email" required >
+<br>
+<label for="number">Number: </label>
+<input type="tel" id="number" name="number"  placeholder="Enter your valid number" required
+pattern="[0-9]{11}"
+maxlength="11"
+minlength="11"
+title="Please enter exactly 11 digits" >
+<br>
+<div class="password-container">
+<label for="password">Password: </label>
+<input type="password" id="password" name="password" placeholder="Enter your password" required >
+<span id="togglePassword">👁</span>
+</div>
+<br>
+<label for="address">Address: </label>
+<textarea id="address" name="address"  placeholder="Enter your current address"> </textarea>
+<button type="submit">Submit</button>
+
+</form>
+
+<div class="table-container">
+    <h2>User Information</h2>
+
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="userTableBody">
+
+        </tbody>
+    </table>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

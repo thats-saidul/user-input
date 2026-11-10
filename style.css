@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 50px 30px;
+    min-height: 50vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+#userForm {
+    width: 40%;
+    max-width: 500px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(19, 5, 5, 0.12);
+}
+#userForm label:has(+ input:required)::after {
+    content: " *";
+    color: red;
+}
+#userForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+#userForm input,#userForm textarea{
+    display: block;
+    width: 70%;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background-color: white;
+    color: #222;
+    font-size: 14px;
+    
+}
+#userForm input:focus,
+#userForm textarea:focus {
+    border-color: #3976e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(57, 118, 232, 0.12);
+}
+#userForm button {
+    display: block;
+    width: 30%;
+    margin-left: 23%;;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #356ae6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#userForm button:hover {
+    background-color: #2453bd;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    display: block;
+    width: 70%;
+    margin-bottom: 18px;
+    padding: 12px 40px 12px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background-color: white;
+    color: #222;
+    font-size: 14px;
+    
+}
+
+#togglePassword {
+    position: absolute;
+    left:  calc(70% - 1px);
+    top:  32px;
+    cursor: pointer;
+}
+
+
+.table-container {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(19, 5, 5, 0.12);
+}
+
+.table-container h2 {
+    color: #344054;
+    margin-top: 0;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#userTable th,
+#userTable td {
+    padding: 12px;
+    border: 1px solid #d0d5dd;
+    text-align: left;
+}
+
+#userTable th {
+    background-color: #356ae6;
+    color: white;
+}
+
+#userTable td button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+
+#userTable td button:hover {
+    background-color: #b02a37;
+}
